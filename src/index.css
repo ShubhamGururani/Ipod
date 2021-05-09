@@ -1,0 +1,91 @@
+/* to stop selection on dragging mouse */
+
+* {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* start of keypad styling */
+.control-panel-wrapper{
+  position: relative;
+  background-color: gray;
+  width: 300px;
+  height: 250px;
+  margin-left: 550px;
+  margin-top: 300px;
+}
+
+.inner-circle{
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: gray;
+  width: 150px;
+  height: 150px;
+  left:75px;
+  top:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons{
+  position: absolute;
+  z-index: 1;
+}
+.buttons img{
+  width:20px;
+  height:20px;
+}
+.top-button{
+  top: 15px;
+  left:125px;
+}
+.left-button{
+  top:115px;
+  left: 35px;
+}
+.right-button{
+  top:115px;
+  right:35px;
+}
+
+#bottom-button {
+  left:125px;
+  bottom:2px;
+}
+#bottom-button img{
+  width: 40px;
+  height:40px;
+}
+
+.outer-circle-rotatable{
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  opacity: 0.5;
+  width: 250px;
+  height: 250px;
+  left: 25px;
+  z-index: 1;
+  
+}
+
+/* end of keypad styling */
