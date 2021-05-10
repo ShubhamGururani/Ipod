@@ -2,9 +2,13 @@ import React from 'react';
 import ZingTouch from 'zingtouch';
 
 class Keypad extends React.Component{
+    
     componentDidMount() {
+        // get moveSelected function from appjs via props
+        const {moveSelected}=this.props;
         //once the component has been mounted
         var currentAngle = 0;
+        var initialAngle = 0;
         // capture the target
         var target = document.getElementById('rotatable');
         // select the region
@@ -13,10 +17,20 @@ class Keypad extends React.Component{
         region.bind(target,'rotate',function(e){
             var rotatable = document.getElementById('rotatable');
             currentAngle += e.detail.distanceFromLast;
+            if(currentAngle-initialAngle>=20){
+                console.log('gone right you go down');
+                moveSelected(-1);
+                initialAngle = currentAngle;
+            }else if(initialAngle-currentAngle>=20){
+                console.log('gone left you go up');
+                moveSelected(1);
+                initialAngle = currentAngle;
+            }
             rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
         });
     }
     render(){
+        
         return(
             <div className="control-panel-wrapper">
                 <div id="rotatable" className="outer-circle-rotatable">
