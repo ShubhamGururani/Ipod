@@ -18,17 +18,23 @@ class Keypad extends React.Component{
             var rotatable = document.getElementById('rotatable');
             currentAngle += e.detail.distanceFromLast;
             if(currentAngle-initialAngle>=20){
-                console.log('gone right you go down');
+                // console.log('gone right you go down');
                 moveSelected(-1);
                 initialAngle = currentAngle;
             }else if(initialAngle-currentAngle>=20){
-                console.log('gone left you go up');
+                // console.log('gone left you go up');
                 moveSelected(1);
                 initialAngle = currentAngle;
             }
             rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
         });
     }
+    toggleMenu=()=>{
+        console.log("callign show menu");
+        var{showMenu} =this.props;
+        showMenu();
+    }
+    
     render(){
         
         return(
@@ -36,7 +42,7 @@ class Keypad extends React.Component{
                 <div id="rotatable" className="outer-circle-rotatable">
                     
                 </div>
-                <div className="buttons top-button">MENU</div>
+                <div className="buttons top-button" onClick={this.toggleMenu}>MENU</div>
                 <div className="buttons left-button">
                     <img 
                     src="https://image.flaticon.com/icons/png/128/254/254437.png"

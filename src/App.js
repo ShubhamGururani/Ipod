@@ -7,9 +7,11 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      previousSelectedItem:0,
+      previousSelectedItem:4,
       selectedItem:1 ,
-      moveSelected:this.moveSelected
+      moveSelected:this.moveSelected,
+      showMenu: this.showMenu,
+      menuNumber:0
     }
   }
   
@@ -31,8 +33,20 @@ class App extends React.Component {
     });
     console.log(selectedItem);
   }
+
+  showMenu = ()=>{
+    var {menuNumber} = this.state;
+    console.log('showmenu');
+    console.log('menuNubmer',menuNumber);
+    if(menuNumber==0){
+      menuNumber=1;
+    }else{
+      menuNumber-=1;
+    }
+    this.setState({menuNumber});
+  }
   render(){
-    var{selectedItem,previousSelectedItem}=this.state;
+    var{selectedItem,previousSelectedItem,menuNumber}=this.state;
     
     return(
       <div className="App">
@@ -40,9 +54,12 @@ class App extends React.Component {
         <Screen
           selectedItem={selectedItem}
           previousSelectedItem={previousSelectedItem}
+          menuNumber={menuNumber}
         />
         <Keypad 
           moveSelected={this.moveSelected}
+          menuNumber={menuNumber}
+          showMenu={this.showMenu}
         />
       </div>
     );
