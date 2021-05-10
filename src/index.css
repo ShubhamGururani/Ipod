@@ -49,6 +49,7 @@ code {
 .buttons{
   position: absolute;
   z-index: 1;
+  cursor: pointer;
 }
 .buttons img{
   width:20px;
