@@ -59,7 +59,7 @@ class Screen extends React.Component{
         else if(menuNumber==2){
             return(
                 <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
+                    <div className="screen-internal-wrapper white">
                         <div className="battery">
                             <img 
                                 src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
@@ -67,7 +67,7 @@ class Screen extends React.Component{
                             />
                         </div>
                         
-                        <div>Coverflow</div>
+                        <div><h1>Coverflow</h1></div>
                     </div>
                 </div>
             );
@@ -99,7 +99,7 @@ class Screen extends React.Component{
         else if(menuNumber==4){
             return(
                 <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
+                    <div className="screen-internal-wrapper white">
                         <div className="battery">
                             <img 
                                 src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
@@ -107,7 +107,8 @@ class Screen extends React.Component{
                             />
                         </div>
                         
-                        <div>Games</div>
+                        <div><h1>Games</h1></div>
+                        <img src="https://image.flaticon.com/icons/png/128/75/75524.png"/>
                     </div>
                 </div>
             );
@@ -115,7 +116,7 @@ class Screen extends React.Component{
         else if(menuNumber==5){
             return(
                 <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
+                    <div className="screen-internal-wrapper white">
                         <div className="battery">
                             <img 
                                 src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
@@ -123,9 +124,9 @@ class Screen extends React.Component{
                             />
                         </div>
                         
-                        <div>Settings</div>
+                        <div><h1>Settings</h1></div>
                         <br/>
-                        <br/>
+                        
                         <img id="settings-image-1" src="https://image.flaticon.com/icons/png/128/565/565591.png"/>
                         <img id="settings-image-2"src="https://image.flaticon.com/icons/png/128/3524/3524659.png"/>
 

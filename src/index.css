@@ -111,6 +111,9 @@ code {
   top:5px;
   overflow: hidden;
 }
+.white{
+  background-color: white;
+}
 
 .battery{
   position: absolute;

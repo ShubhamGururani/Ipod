@@ -67,7 +67,7 @@ class Keypad extends React.Component{
                     />
                 </div>
                 <div className="inner-circle ">
-                    <span className="buttons" onClick={this.goIn}>home</span>
+                    <span className="buttons" onClick={this.goIn}>Enter</span>
                 </div>
                 
             </div>
