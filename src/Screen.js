@@ -124,6 +124,11 @@ class Screen extends React.Component{
                         </div>
                         
                         <div>Settings</div>
+                        <br/>
+                        <br/>
+                        <img id="settings-image-1" src="https://image.flaticon.com/icons/png/128/565/565591.png"/>
+                        <img id="settings-image-2"src="https://image.flaticon.com/icons/png/128/3524/3524659.png"/>
+
                     </div>
                 </div>
             );

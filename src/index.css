@@ -151,3 +151,25 @@ code {
 .active{
   background-color: blue;
 }
+
+/* settings screen */
+
+#settings-image-1{
+  width: 50px;
+  animation: spin-opposite 2s linear infinite;
+}
+#settings-image-2{
+  width: 75px;
+  animation: spin 4s linear infinite;
+  margin-left: -5px;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-opposite {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
