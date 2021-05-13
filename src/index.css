@@ -126,7 +126,15 @@ code {
   width: 125px;
   background-color: white;
   bottom: 0px;
-  animation: 1s ease-out 0s 1 slideInFromBottom;
+  animation: 0.5s ease-out 0s 1 slideInFromBottom;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 .side-menu ul{
   list-style: none;
@@ -137,17 +145,9 @@ code {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left:20px;
-  
-  
+  font-size: 15px;
 }
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 .active{
   background-color: blue;
 }

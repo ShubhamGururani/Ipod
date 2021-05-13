@@ -38,10 +38,30 @@ class App extends React.Component {
     var {menuNumber} = this.state;
     console.log('showmenu');
     console.log('menuNubmer',menuNumber);
-    if(menuNumber==0){
-      menuNumber=1;
-    }else{
-      menuNumber-=1;
+    if(menuNumber==1){
+      menuNumber=0;
+    }
+    else{
+      menuNumber =1;
+    }
+    this.setState({menuNumber});
+  }
+  goInside = () =>{
+    var {selectedItem,menuNumber} = this.state;
+    console.log('selected an Item');
+    switch(selectedItem){
+      case 1:
+        menuNumber = 2;
+        break;
+      case 2:
+        menuNumber = 3;
+        break;
+      case 3:
+        menuNumber = 4;
+        break;
+      case 4:
+        menuNumber = 5;
+        break;
     }
     this.setState({menuNumber});
   }
@@ -60,6 +80,7 @@ class App extends React.Component {
           moveSelected={this.moveSelected}
           menuNumber={menuNumber}
           showMenu={this.showMenu}
+          goInside={this.goInside}
         />
       </div>
     );

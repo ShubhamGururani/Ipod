@@ -34,6 +34,11 @@ class Keypad extends React.Component{
         var{showMenu} =this.props;
         showMenu();
     }
+    goIn = () =>{
+        console.log('lets go in');
+        var {goInside} = this.props;
+        goInside();
+    }
     
     render(){
         
@@ -61,8 +66,8 @@ class Keypad extends React.Component{
                     alt="Play/Pause"
                     />
                 </div>
-                <div className="inner-circle">
-                    home
+                <div className="inner-circle ">
+                    <span className="buttons" onClick={this.goIn}>home</span>
                 </div>
                 
             </div>
