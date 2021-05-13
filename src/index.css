@@ -93,6 +93,7 @@ code {
 
 /* start of screen styling */
 
+
 .screen-wrapper{
   width: 300px;
   height: 300px;
@@ -101,32 +102,51 @@ code {
   margin-left: 550px;
   margin-top: 50px;
 }
+.screen-internal-wrapper{
+  width: 290px;
+  height: 290px;
+  background-color: pink;
+  position: absolute;
+  left:5px;
+  top:5px;
+  overflow: hidden;
+}
 
 .battery{
   position: absolute;
-  right: 5px;
+  right: 3px;
+  top:-3px;
 }
 .battery img{
-  width: 40px;
+  width: 30px;
   transform: rotate(-180deg);
 }
 .side-menu{
   position: absolute;
-  left: 10px;
+  width: 125px;
   background-color: white;
-  top: 10px;
+  bottom: 0px;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 .side-menu ul{
   list-style: none;
   text-align: left;
-  
-  margin-left:-40px;
+  margin-left: -40px;
 }
 .side-menu ul li{
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left:20px;
   
+  
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .active{
   background-color: blue;

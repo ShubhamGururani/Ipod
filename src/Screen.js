@@ -22,32 +22,36 @@ class Screen extends React.Component{
         if(menuNumber==0){
             return(
                 <div className="screen-wrapper">
-                    <div className="battery">
-                        <img 
-                            src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                            alt="battery"
-                        />
+                    <div className="screen-internal-wrapper">
+                        <div className="battery">
+                            <img 
+                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
+                                alt="battery"
+                            />
+                        </div>
                     </div>
                 </div>
             );
         }else{
             return(
                 <div className="screen-wrapper">
-                    <div className="battery">
-                        <img 
-                            src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                            alt="battery"
-                        />
-                    </div>
-                    
-                    <div className="side-menu">
-                        <h1>iPod.js</h1>
-                        <ul>
-                            <li id="item1">Songs</li>
-                            <li id="item2">Albums</li>
-                            <li id="item3">Artists</li>
-                            <li id="item4">Playlists</li>
-                        </ul>
+                    <div className="screen-internal-wrapper">
+                        <div className="battery">
+                            <img 
+                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
+                                alt="battery"
+                            />
+                        </div>
+                        
+                        <div className="side-menu">
+                            <h1>iPod.js</h1>
+                            <ul>
+                                <li id="item1">Songs</li>
+                                <li id="item2">Albums</li>
+                                <li id="item3">Artists</li>
+                                <li id="item4">Playlists</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             );
