@@ -1,4 +1,6 @@
 import React from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 class Screen extends React.Component{
     componentDidMount(){
@@ -16,7 +18,19 @@ class Screen extends React.Component{
         document.getElementById(`item${selectedItem}`).classList.add('active');
         document.getElementById(`item${previousSelectedItem}`).classList.remove('active');
     }
+    Player = () => (
+        <AudioPlayer
+          autoPlay
+          showJumpControls={false}
+          customVolumeControls={[]}
+          customAdditionalControls={[]}
+          src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
+          onPlay={e => console.log("onPlay")}
+          // other props here
+        />
+    );
     render(){
+        
         const{menuNumber} =this.props;
         console.log('menuNumber',menuNumber);
         if(menuNumber==0){
@@ -144,9 +158,17 @@ class Screen extends React.Component{
                                 alt="battery"
                             />
                         </div>
-                        
+                       
                         <div><h1>Player</h1></div>
                         <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        {this.Player()}
                         
                         
                     </div>
