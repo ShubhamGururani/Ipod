@@ -3,6 +3,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import Homescreen from './Homescreen';
 import Notibar from './Notibar';
+import Mainmenu from './Mainmenu';
 
 class Screen extends React.Component{
     componentDidMount(){
@@ -41,21 +42,7 @@ class Screen extends React.Component{
             );
         }else if(menuNumber==1){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
-                        <Notibar/>
-                        
-                        <div className="side-menu">
-                            <h1>iPod.js</h1>
-                            <ul>
-                                <li id="item1">Coverflow</li>
-                                <li id="item2">Music</li>
-                                <li id="item3">Games</li>
-                                <li id="item4">Settings</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <Mainmenu/>
             );
         }
         else if(menuNumber==2){
