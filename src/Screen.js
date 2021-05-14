@@ -1,6 +1,7 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import Notibar from './Notibar';
 
 class Screen extends React.Component{
     componentDidMount(){
@@ -32,17 +33,12 @@ class Screen extends React.Component{
     render(){
         
         const{menuNumber} =this.props;
-        console.log('menuNumber',menuNumber);
+        // console.log('menuNumber',menuNumber);
         if(menuNumber==0){
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                     </div>
                 </div>
             );
@@ -50,12 +46,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                         
                         <div className="side-menu">
                             <h1>iPod.js</h1>
@@ -74,12 +65,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper white">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                         
                         <div><h1>Coverflow</h1></div>
                     </div>
@@ -90,12 +76,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                         
                         <div className="side-menu">
                             <h1>iPod.js</h1>
@@ -114,12 +95,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper white">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                         
                         <div><h1>Games</h1></div>
                         <img src="https://image.flaticon.com/icons/png/128/75/75524.png"/>
@@ -131,12 +107,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper white">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                         
                         <div><h1>Settings</h1></div>
                         <br/>
@@ -152,12 +123,7 @@ class Screen extends React.Component{
             return(
                 <div className="screen-wrapper">
                     <div className="screen-internal-wrapper white">
-                        <div className="battery">
-                            <img 
-                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
-                                alt="battery"
-                            />
-                        </div>
+                        <Notibar/>
                        
                         <div><h1>Player</h1></div>
                         <br/>
