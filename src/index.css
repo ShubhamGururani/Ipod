@@ -171,6 +171,7 @@ code {
 
 .active{
   background-color: rgb(64, 64, 233);
+  color: white;
 }
 
 /* settings screen */

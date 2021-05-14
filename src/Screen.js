@@ -4,6 +4,8 @@ import 'react-h5-audio-player/lib/styles.css';
 import Homescreen from './Homescreen';
 import Notibar from './Notibar';
 import Mainmenu from './Mainmenu';
+import Coverflow from './Coverflow';
+import Musicmenu from './Musicmenu';
 
 class Screen extends React.Component{
     componentDidMount(){
@@ -47,32 +49,12 @@ class Screen extends React.Component{
         }
         else if(menuNumber==2){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper white">
-                        <Notibar/>
-                        
-                        <div><h1>Coverflow</h1></div>
-                    </div>
-                </div>
+                <Coverflow/>
             );
         }
         else if(menuNumber==3){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
-                        <Notibar/>
-                        
-                        <div className="side-menu">
-                            <h1>iPod.js</h1>
-                            <ul>
-                                <li id="item1">Artists</li>
-                                <li id="item2">Songs</li>
-                                <li id="item3">Playlists</li>
-                                <li id="item4">Noob</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <Musicmenu/>
             );
         }
         else if(menuNumber==4){
