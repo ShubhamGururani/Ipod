@@ -1,11 +1,13 @@
 import React from 'react';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+
 import Homescreen from './Homescreen';
 import Notibar from './Notibar';
 import Mainmenu from './Mainmenu';
 import Coverflow from './Coverflow';
 import Musicmenu from './Musicmenu';
+import Games from './Games';
+import Settings from './Settings';
+import Musicplayer from './Musicplayer';
 
 class Screen extends React.Component{
     componentDidMount(){
@@ -23,17 +25,7 @@ class Screen extends React.Component{
         document.getElementById(`item${selectedItem}`).classList.add('active');
         document.getElementById(`item${previousSelectedItem}`).classList.remove('active');
     }
-    Player = () => (
-        <AudioPlayer
-          autoPlay
-          showJumpControls={false}
-          customVolumeControls={[]}
-          customAdditionalControls={[]}
-          src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
-          onPlay={e => console.log("onPlay")}
-          // other props here
-        />
-    );
+    
     render(){
         
         const{menuNumber} =this.props;
@@ -59,52 +51,17 @@ class Screen extends React.Component{
         }
         else if(menuNumber==4){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper white">
-                        <Notibar/>
-                        
-                        <div><h1>Games</h1></div>
-                        <img src="https://image.flaticon.com/icons/png/128/75/75524.png"/>
-                    </div>
-                </div>
+                <Games/>
             );
         }
         else if(menuNumber==5){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper white">
-                        <Notibar/>
-                        
-                        <div><h1>Settings</h1></div>
-                        <br/>
-                        
-                        <img id="settings-image-1" src="https://image.flaticon.com/icons/png/128/565/565591.png"/>
-                        <img id="settings-image-2"src="https://image.flaticon.com/icons/png/128/3524/3524659.png"/>
-
-                    </div>
-                </div>
+                <Settings/>
             );
         }
         else if(menuNumber==6){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper white">
-                        <Notibar/>
-                       
-                        <div><h1>Player</h1></div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        {this.Player()}
-                        
-                        
-                    </div>
-                </div>
+                <Musicplayer/>
             );
         }
        
