@@ -1,6 +1,7 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import Homescreen from './Homescreen';
 import Notibar from './Notibar';
 
 class Screen extends React.Component{
@@ -36,11 +37,7 @@ class Screen extends React.Component{
         // console.log('menuNumber',menuNumber);
         if(menuNumber==0){
             return(
-                <div className="screen-wrapper">
-                    <div className="screen-internal-wrapper">
-                        <Notibar/>
-                    </div>
-                </div>
+                <Homescreen/>
             );
         }else if(menuNumber==1){
             return(
