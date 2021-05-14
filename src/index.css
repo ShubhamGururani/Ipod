@@ -146,8 +146,10 @@ code {
   width: 125px;
   background-color: white;
   bottom: 0px;
-  animation: 0.5s ease-out 0s 1 slideInFromBottom;
   border-top-right-radius: 10px;
+}
+.side-menu-animated{
+  animation: 0.5s ease-out 0s 1 slideInFromBottom;
 }
 @keyframes slideInFromBottom {
   0% {

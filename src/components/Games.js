@@ -7,7 +7,7 @@ const Games = () =>{
                 <Notibar/>
                 
                 <div><h1>Games</h1></div>
-                <img src="https://image.flaticon.com/icons/png/128/75/75524.png"/>
+                <img alt="game-icon" src="https://image.flaticon.com/icons/png/128/75/75524.png"/>
             </div>
         </div>
     );

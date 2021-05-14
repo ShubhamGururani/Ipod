@@ -30,12 +30,12 @@ class Keypad extends React.Component{
         });
     }
     toggleMenu=()=>{
-        console.log("callign show menu");
+        // console.log("callign show menu");
         var{showMenu} =this.props;
         showMenu();
     }
     goIn = () =>{
-        console.log('lets go in');
+        // console.log('lets go in');
         var {goInside} = this.props;
         goInside();
     }

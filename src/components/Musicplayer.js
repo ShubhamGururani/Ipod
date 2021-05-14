@@ -10,7 +10,7 @@ class Musicplayer extends React.Component{
           customVolumeControls={[]}
           customAdditionalControls={[]}
           src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
-          onPlay={e => console.log("onPlay")}
+        //   onPlay={e => console.log("onPlay")}
           // other props here
         />
     );
