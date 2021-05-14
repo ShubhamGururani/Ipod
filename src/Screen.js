@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Homescreen from './Homescreen';
-import Notibar from './Notibar';
-import Mainmenu from './Mainmenu';
-import Coverflow from './Coverflow';
-import Musicmenu from './Musicmenu';
-import Games from './Games';
-import Settings from './Settings';
-import Musicplayer from './Musicplayer';
+import Homescreen from './components/Homescreen';
+import Mainmenu from './components/Mainmenu';
+import Coverflow from './components/Coverflow';
+import Musicmenu from './components/Musicmenu';
+import Games from './components/Games';
+import Settings from './components/Settings';
+import Musicplayer from './components/Musicplayer';
 
 class Screen extends React.Component{
     componentDidMount(){
