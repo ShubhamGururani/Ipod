@@ -41,6 +41,9 @@ class App extends React.Component {
     if(menuNumber==1){
       menuNumber=0;
     }
+    else if(menuNumber==6){
+      menuNumber=3;
+    }
     else{
       menuNumber =1;
     }
@@ -49,20 +52,25 @@ class App extends React.Component {
   goInside = () =>{
     var {selectedItem,menuNumber} = this.state;
     console.log('selected an Item');
-    switch(selectedItem){
-      case 1:
-        menuNumber = 2;
-        break;
-      case 2:
-        menuNumber = 3;
-        break;
-      case 3:
-        menuNumber = 4;
-        break;
-      case 4:
-        menuNumber = 5;
-        break;
+    if(menuNumber==1){
+      switch(selectedItem){
+        case 1:
+          menuNumber = 2;
+          break;
+        case 2:
+          menuNumber = 3;
+          break;
+        case 3:
+          menuNumber = 4;
+          break;
+        case 4:
+          menuNumber = 5;
+          break;
+      }
+    }else if(menuNumber==3){
+      menuNumber=6;
     }
+    
     this.setState({menuNumber});
   }
   render(){

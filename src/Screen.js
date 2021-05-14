@@ -3,7 +3,7 @@ import React from 'react';
 class Screen extends React.Component{
     componentDidMount(){
         const{menuNumber} =this.props;
-        if(menuNumber==0||menuNumber==2||menuNumber==4||menuNumber==5) return;
+        if(menuNumber==0||menuNumber==2||menuNumber==4||menuNumber==5||menuNumber==6) return;
         // console.log(this.props);
         const {selectedItem} = this.props;
         // console.log(`item${selectedItem}`);
@@ -11,7 +11,7 @@ class Screen extends React.Component{
     }
     componentDidUpdate(){
         const{menuNumber} =this.props;
-        if(menuNumber==0||menuNumber==2||menuNumber==4||menuNumber==5) return;
+        if(menuNumber==0||menuNumber==2||menuNumber==4||menuNumber==5||menuNumber==6) return;
         const {selectedItem,previousSelectedItem} =this.props;
         document.getElementById(`item${selectedItem}`).classList.add('active');
         document.getElementById(`item${previousSelectedItem}`).classList.remove('active');
@@ -86,9 +86,9 @@ class Screen extends React.Component{
                         <div className="side-menu">
                             <h1>iPod.js</h1>
                             <ul>
-                                <li id="item1">Artist</li>
-                                <li id="item2">Song</li>
-                                <li id="item3">Playlist</li>
+                                <li id="item1">Artists</li>
+                                <li id="item2">Songs</li>
+                                <li id="item3">Playlists</li>
                                 <li id="item4">Noob</li>
                             </ul>
                         </div>
@@ -130,6 +130,25 @@ class Screen extends React.Component{
                         <img id="settings-image-1" src="https://image.flaticon.com/icons/png/128/565/565591.png"/>
                         <img id="settings-image-2"src="https://image.flaticon.com/icons/png/128/3524/3524659.png"/>
 
+                    </div>
+                </div>
+            );
+        }
+        else if(menuNumber==6){
+            return(
+                <div className="screen-wrapper">
+                    <div className="screen-internal-wrapper white">
+                        <div className="battery">
+                            <img 
+                                src="https://image.flaticon.com/icons/png/128/3103/3103460.png" 
+                                alt="battery"
+                            />
+                        </div>
+                        
+                        <div><h1>Player</h1></div>
+                        <br/>
+                        
+                        
                     </div>
                 </div>
             );
