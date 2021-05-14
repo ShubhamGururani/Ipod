@@ -53,24 +53,10 @@ class App extends React.Component {
     var {selectedItem,menuNumber} = this.state;
     console.log('selected an Item');
     if(menuNumber==1){
-      switch(selectedItem){
-        case 1:
-          menuNumber = 2;
-          break;
-        case 2:
-          menuNumber = 3;
-          break;
-        case 3:
-          menuNumber = 4;
-          break;
-        case 4:
-          menuNumber = 5;
-          break;
-      }
+      menuNumber += selectedItem;
     }else if(menuNumber==3){
       menuNumber=6;
     }
-    
     this.setState({menuNumber});
   }
   render(){

@@ -26,44 +26,18 @@ class Screen extends React.Component{
     }
     
     render(){
-        
-        const{menuNumber} =this.props;
-        // console.log('menuNumber',menuNumber);
-        if(menuNumber==0){
-            return(
-                <Homescreen/>
-            );
-        }else if(menuNumber==1){
-            return(
-                <Mainmenu/>
-            );
-        }
-        else if(menuNumber==2){
-            return(
-                <Coverflow/>
-            );
-        }
-        else if(menuNumber==3){
-            return(
-                <Musicmenu/>
-            );
-        }
-        else if(menuNumber==4){
-            return(
-                <Games/>
-            );
-        }
-        else if(menuNumber==5){
-            return(
-                <Settings/>
-            );
-        }
-        else if(menuNumber==6){
-            return(
-                <Musicplayer/>
-            );
-        }
-       
+        const{menuNumber} =this.props; 
+        return(
+            <div>
+                {menuNumber==0 && <Homescreen/>}
+                {menuNumber==1 && <Mainmenu/>}
+                {menuNumber==2 && <Coverflow/>}
+                {menuNumber==3 && <Musicmenu/>}
+                {menuNumber==4 && <Games/>}
+                {menuNumber==5 && <Settings/>}
+                {menuNumber==6 && <Musicplayer/>}
+            </div>
+        );
     }
 }
 
